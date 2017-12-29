@@ -8,7 +8,7 @@
 <title>Welcome to OpenShift</title></head>
 
 <body>
-
+<!--
   <h1>Hello World!</h1>
   <?php
     echo "<h1>First PHP line</h1>";
@@ -20,6 +20,7 @@
     echo $z;
     echo $z;
    ?>
-
+-->
+<h1>HTML experiment</h1>
 </body>
 </html>
