@@ -21,6 +21,7 @@
     echo $z;
    ?>
 -->
-<h1>HTML experiment</h1>
+<!--  <h1>HTML experiment</h1>   -->
+<?php  phpinfo();  ?>
 </body>
 </html>
