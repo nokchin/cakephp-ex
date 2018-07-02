@@ -45,10 +45,10 @@ print "<h1>Hello 3</h1>";
 print "Variable z is $z     ,     $x      $y ; $x+$y ";
 print("Variable z is $z     ,     $x      $y ; $x+$y <br>");
 echo "Variable z is $z     ,     $x      $y ; $x+$y <br>";
-    $greeting = "String in double-quote!\"\'~\$";
-    $greeting1= 'String in single-quote!\"\'~\$ $ $ $var $a $ $';
-print "$greeting<BR>";
-echo "$greeting1<BR>";
+    $x = "String in double-quote!\"\'~\$ $x $y $z";
+    $y = 'String in single-quote!\"\'~\$ $ $ $var $a $ $';
+print "$x<BR>";
+echo "$y<BR>";
 
 phpinfo();
 ?>
