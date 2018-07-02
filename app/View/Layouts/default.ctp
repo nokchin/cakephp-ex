@@ -45,8 +45,8 @@ print "<h1>Hello 3</h1>";
 print "Variable z is $z     ,     $x      $y ; $x+$y ";
 print("Variable z is $z     ,     $x      $y ; $x+$y <br>");
 echo "Variable z is $z     ,     $x      $y ; $x+$y <br>";
-    $x = "String in double-quote!\"\'~\$ $x $y $z";
-    $y = 'String in single-quote!\"\'~\$ $ $ $var $a $ $';
+    $x = "String in double-quote!\"\'~\$ $ $ $var $a $x $y $z";
+    $y = 'String in single-quote!\"\'~\$ $ $ $var $a $x $y $z';
 print "$x<BR>";
 echo "$y<BR>";
 
