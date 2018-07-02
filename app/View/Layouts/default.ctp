@@ -22,13 +22,15 @@
    ?>
 -->
 <!--  <h1>HTML experiment</h1>   -->
-<!--  <?php  phpinfo();  ?>      -->
 
 <?php
-print "An example with single line comments";   #  This is a comment.
-print "This spans                               // This is also a comment.
+#  This is a comment.
+// This is also a comment.
+print "An example with single line comments";
+print "This spans
 multiple lines. The newlines will be
 output as well";
+phpinfo();
 ?>
 
 </body>
