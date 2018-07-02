@@ -26,19 +26,28 @@
 <?php
 #  This is a comment.
 // This is also a comment.
+/* The smallest building blocks of PHP are the indivisible tokens,
+   such as numbers (3.14159), strings ("Hello"), variables ($two), constants (TRUE), and the special words that make up the syntax of PHP itself
+   like if, else, while, for and so forth.            */
 print "An example with single line comments";
 print "This spans
 multiple lines. The newlines will be
 output as well";
 print "Hello 2<BR>";
 print "Hello 1\n";
+print "2    3     4";
 print "<h1>Hello 3</h1>";
     $x=12;
-    $y=5;
+    $y=5.12;
     $z=$x+$y;
-print "Variable z is $z";
-print("Variable z is $z<br>");
-echo "Variable z is $z    ,   $x    $y<br>";
+print "Variable z is $z     ,     $x      $y ; $x+$y ";
+print("Variable z is $z     ,     $x      $y ; $x+$y <br>");
+echo "Variable z is $z     ,     $x      $y ; $x+$y <br>";
+    $greeting = "String in double-quote!\"\'~\$";
+    $greeting1= 'String in single-quote!';
+print "$greeting<BR>";
+echo "$greeting1<BR>";
+
 phpinfo();
 ?>
 
