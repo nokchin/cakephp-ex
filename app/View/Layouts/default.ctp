@@ -30,6 +30,14 @@ print "An example with single line comments";
 print "This spans
 multiple lines. The newlines will be
 output as well";
+print "Hello 1\n";
+print "Hello 2<BR>";
+print "<h1>Hello 3</h1>";
+    $x=12;
+    $y=5;
+    $z=$x+$y;
+print "Variable z is $z";
+print("Variable z is $z<br>");
 phpinfo();
 ?>
 
