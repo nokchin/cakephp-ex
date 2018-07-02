@@ -23,6 +23,8 @@
 -->
 <!--  <h1>HTML experiment</h1>   -->
 
+
+
 <?php
 #  This is a comment.
 // This is also a comment.
@@ -44,7 +46,7 @@ print "Variable z is $z     ,     $x      $y ; $x+$y ";
 print("Variable z is $z     ,     $x      $y ; $x+$y <br>");
 echo "Variable z is $z     ,     $x      $y ; $x+$y <br>";
     $greeting = "String in double-quote!\"\'~\$";
-    $greeting1= 'String in single-quote!';
+    $greeting1= 'String in single-quote!\"\'~\$ $ $ $var $a $ $';
 print "$greeting<BR>";
 echo "$greeting1<BR>";
 
