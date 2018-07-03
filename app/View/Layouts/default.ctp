@@ -28,9 +28,18 @@
 <?php
 #  This is a comment.
 // This is also a comment.
-/* The smallest building blocks of PHP are the indivisible tokens,
-   such as numbers (3.14159), strings ("Hello"), variables ($two), constants (TRUE), and the special words that make up the syntax of PHP itself
-   like if, else, while, for and so forth.            */
+/* PHP has a total of eight data types to use to construct variables -
+     1. Integers - are whole numbers, without a decimal point, like 4195.
+     2. Doubles - are floating-point numbers, like 3.14159 or 49.1 .
+     3. Booleans - have only two possible values either true or false.
+     4. NULL - is a special type that only has one value: NULL.
+     5. Strings - are sequences of characters, like 'PHP supports string operations.'
+     6. Arrays - are named and indexed collections of other values.
+     7. Objects - are instances of programmer-defined classes, which can package up both other kinds of values and functions that are specific to the class.
+     8. Resources - are special variables that hold references to resources external to PHP (such as database connections).
+   The first five are simple types, and the next two (arrays and objects) are compound - the compound types can package up other arbitrary values of
+   arbitrary type, whereas the simple types cannot.            */
+
 print "An example with single line comments";
 print "This spans
 multiple lines. The newlines will be
@@ -50,6 +59,11 @@ echo 'Variable z is $z     ,     $x      $y ; $x+$y <br>';
     $y = 'String in single-quote!\"\'~\$ $ $ $var $a $x $y $z';
 print "$x<BR>";
 echo "$y<BR>";
+
+    $x=0xffffffff;
+    $y=$x+1;
+echo "$x $y<br>";
+
 
 phpinfo();
 ?>
