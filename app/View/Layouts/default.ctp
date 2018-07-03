@@ -27,7 +27,7 @@
 
 <?php
 #  This is a comment.
-// This is also a comment.
+// This is also a comment.   This is a good online PHP manual/tutorial site:  http://php.net/manual/en/function.substr.php  .
 /* PHP has a total of eight data types to use to construct variables -
      1. Integers - are whole numbers, without a decimal point, like 4195.
      2. Doubles - are floating-point numbers, like 3.14159 or 49.1 .
@@ -60,10 +60,13 @@ echo 'Variable z is $z     ,     $x      $y ; $x+$y <br>';
 print "$x<BR>";
 echo "$y<BR>";
 
-    $x=0xffffffff;
+    $x=0xfffffffff;
+    $x=$x+1;
+    $y=0xffffffffff;
+echo "$x $y<br>";
+    $x='0xf';
     $y=$x+1;
 echo "$x $y<br>";
-
 
 phpinfo();
 ?>
