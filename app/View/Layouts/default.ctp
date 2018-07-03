@@ -67,6 +67,10 @@ echo "$x $y<br>";
     $x='0xf';
     $y=$x+1;
 echo "$x $y<br>";
+    $x="0xf";
+    $y=$x*1;
+    $x=$x|0;
+echo "$x $y<br>";
 
 phpinfo();
 ?>
