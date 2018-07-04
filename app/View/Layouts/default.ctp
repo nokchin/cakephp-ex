@@ -30,7 +30,7 @@
 // This is also a comment.
 /*
 -  A good online PHP manual/tutorial site:  http://php.net/manual/en/function.substr.php  ,  http://php.net/manual/en/language.operators.bitwise.php  ,
-                                            http://php.net/manual/en/language.operators.string.php  .
+                                            http://php.net/manual/en/language.operators.string.php  ,  http://php.net/manual/en/function.hexdec.php  .
 -  In PHP, right shifts have copies of the sign bit shifted in on the left, meaning the sign of an operand is preserved. Unlike Javascript, PHP does not
    have the >>> bit-shift operator.
 -  Some PHP string operations:   $substring = substr($string, start_index, length)  .   $str_length = strlen($string)  .
@@ -108,7 +108,8 @@ echo "$x $y<br>";
     $x="15";    $y=intval($x);  echo "$x $y<br>";
     $x="0xf";   settype($x, "integer");    echo "$x <br>";
     $x="15";    settype($x, "integer");    echo "$x <br>";
-    
+    $x="0xa0";  $y=hexdec($x)+1;   echo "$x $y<br>";    // converts a hexadecimal string to a decimal number.
+    $x="a0";    $y=hexdec($x)+2;   echo "$x $y<br>";    // converts a hexadecimal string to a decimal number.
 
 phpinfo();
 ?>
