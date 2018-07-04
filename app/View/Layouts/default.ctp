@@ -96,18 +96,19 @@ echo "$y<BR>";
     $y=0xffffffffff;
 echo "$x $y<br>";
     $x='0xf';
-    $y=$x+1;
+    $y=$x+1;           // doesn't work.
 echo "$x $y<br>";
     $x="0xf";
-    $y=$x*1;
-    $x=$x|0;
+    $y=$x*1;           // doesn't work.
+    $x=$x|0;           // doesn't work.
 echo "$x $y<br>";
-    $x='0xf';
-    $y= (int)$x +1;
-echo "$x $y<br>";
-    $x="0xf";
-    $y= intval($x)+2;
-echo "$x $y<br>";
+    $x='0xf';   $y=(int)$x;     echo "$x $y<br>";
+    $x='15';    $y=(int)$x;     echo "$x $y<br>";
+    $x="0xf";   $y=intval($x);  echo "$x $y<br>";
+    $x="15";    $y=intval($x);  echo "$x $y<br>";
+    $x="0xf";   settype($x, "integer");    echo "$x <br>";
+    $x="15";    settype($x, "integer");    echo "$x <br>";
+    
 
 phpinfo();
 ?>
