@@ -47,7 +47,7 @@ $bits='8c577e17';
       $h[40]=0xa2bfe8a1; $h[41]=0xa81a664b; $h[42]=0xc24b8b70; $h[43]=0xc76c51a3; $h[44]=0xd192e819; $h[45]=0xd6990624; $h[46]=0xf40e3585; $h[47]=0x106aa070;
       $h[48]=0x19a4c116; $h[49]=0x1e376c08; $h[50]=0x2748774c; $h[51]=0x34b0bcb5; $h[52]=0x391c0cb3; $h[53]=0x4ed8aa4a; $h[54]=0x5b9cca4f; $h[55]=0x682e6ff3;
       $h[56]=0x748f82ee; $h[57]=0x78a5636f; $h[58]=0x84c87814; $h[59]=0x8cc70208; $h[60]=0x90befffa; $h[61]=0xa4506ceb; $h[62]=0xbef9a3f7; $h[63]=0xc67178f2;
-
+/*
       $m = array();
       $m[0] = hexdec(substr($merkleroot,-8,8));
       $m[1] = hexdec($mintime);
@@ -136,7 +136,7 @@ for ($i=0; $i<64; $i++) {
 }
       $m[3]=($m[3]+1)&0xffffffff;
   } while ( $m[3]!=hexdec($nonce2) )
-
+*/
 ?>
 
 
