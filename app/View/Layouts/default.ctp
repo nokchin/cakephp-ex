@@ -34,8 +34,8 @@ $bits='8c577e17';
 
 
 
-
-      $nonce1 = '6e383500';
+      $nonce1 = '6e19b093';   // = 1847177363 (decimal)  ->  2 million less than the required/correct nonce value.   [Other value pairs:  0x6e28f2d3 = 1848177363 (decimal) ]
+    //$nonce1 = '6e383500';
     //$nonce1 = 'fffffff0';
       $nonce2 = '0';
 
