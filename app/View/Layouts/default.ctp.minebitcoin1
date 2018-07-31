@@ -625,7 +625,10 @@ for ($i=0; $i<64; $i++) {
 //} while (m[3]|0)    //the loop will exit using this line.    I have tried before using  "while (m[3])"  and the loop does NOT exit (maybe due to the carry-over bit?).
 //} while (m[3]!=0x3)     //for experiment purpose (better use hex number here, because Javascript maximum POSITIVE decimal integer/number is until 2,147,483,647 only).
 //} while (m[3]!=1949177363)   // =0x742e1613.  For experiment purpose (better use hex number here, because Javascript maximum POSITIVE decimal integer/number is until 2,147,483,647 only).
-  } while ( $m[3]!=hexdec($nonce2) )     //better use hex number here, because Javascript maximum POSITIVE decimal integer/number is until 2,147,483,647 only.
+  } while ( $m[3]!=hexdec($nonce2) );   //better use hex number here, because Javascript maximum POSITIVE decimal integer/number is until 2,147,483,647 only.
+                                        //[VERY IMPORTANT]: MUST have ending semicolon at the   "do {} while (...);"   statement. If not, RedHat OpenShift PHP interpreter will give error.
+
+    echo "DONE!<br>";
 
 //    blocktemplate = new Audio("buzzer_x.wav"); // buffers automatically when created
 //    blocktemplate.play();

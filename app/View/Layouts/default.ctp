@@ -35,8 +35,8 @@ $bits='8c577e17';
 
 
 
-    //$nonce1 = '6e383500';
-      $nonce1 = 'fffffff0';
+      $nonce1 = '6e383500';
+    //$nonce1 = 'fffffff0';
       $nonce2 = '0';
 
       $h = array();
@@ -102,8 +102,8 @@ for ($i=3; $i<64; $i++) {
       $reg_b=$reg_a;
       $reg_a=$blocktemplate;
 }
+// OK until here.
 
-/*
       $mm[0]=($reg_a+$midstate[0])&0xffffffff;   $mm[1]=($reg_b+$midstate[1])&0xffffffff;   $mm[2]=($reg_c+$midstate[2])&0xffffffff;   $mm[3]=($reg_d+$midstate[3])&0xffffffff;
       $mm[4]=($reg_e+$midstate[4])&0xffffffff;   $mm[5]=($reg_f+$midstate[5])&0xffffffff;   $mm[6]=($reg_g+$midstate[6])&0xffffffff;   $mm[7]=($reg_h+$midstate[7])&0xffffffff;
 
@@ -118,28 +118,28 @@ for ($i=0; $i<64; $i++) {
       $reg_f=$reg_e;
       $reg_e=($reg_d+$blocktemplate)&0xffffffff;
       if ($i==60) {
-        if (($reg_e+0x5be0cd19)&0xffffffff) {break}
+        if (($reg_e+0x5be0cd19)&0xffffffff) {break;}
       }
       if ($i==61) {
-        if (($reg_e+0x1f83d9ab)&0xffffffff) {break}
+        if (($reg_e+0x1f83d9ab)&0xffffffff) {break;}
       }
       if ($i==62) {
           $str=dechex($reg_e+0x9b05688c);
-          if (substr($str,-2,2)!='00') {break}
+          if (substr($str,-2,2)!='00') {break;}
           if (hexdec(substr($str,-4,2).substr($str,-6,2).substr($str,-8,2)) < hexdec($bits_coef)) {
             echo dechex($m[3]&0xffffffff);
             echo "<br>";
           //exit(0);
             break 2;
           }
-          else {break}
+          else {break;}
       }
       $blocktemplate=(  $blocktemplate+(($reg_a<<30| (($reg_a>>2)&0x3fffffff) )^($reg_a<<19| (($reg_a>>13)&0x7ffff) )^($reg_a<<10| (($reg_a>>22)&0x3ff) ))+($reg_a&$reg_b^$reg_a&$reg_c^$reg_b&$reg_c)  )&0xffffffff;
       $reg_d=$reg_c;
       $reg_c=$reg_b;
       $reg_b=$reg_a;
       $reg_a=$blocktemplate;
-}      */
+}
       $m[3]=($m[3]+1)&0xffffffff;
   } while ( $m[3]!=hexdec($nonce2) );
 
