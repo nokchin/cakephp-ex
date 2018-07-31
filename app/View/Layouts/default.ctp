@@ -141,7 +141,7 @@ for ($i=0; $i<64; $i++) {
       $reg_a=$blocktemplate;
 }      */
       $m[3]=($m[3]+1)&0xffffffff;
-  } while ( $m[3]!=hexdec($nonce2) )
+  } while ( $m[3]!=hexdec($nonce2) );
 
       echo "DONE!<br>";
 ?>
