@@ -35,8 +35,8 @@ $bits='8c577e17';
 
 
 
-    //$nonce1 = '6e383500';
-      $nonce1 = 'fffffff0';
+      $nonce1 = '6e383500';
+    //$nonce1 = 'fffffff0';
       $nonce2 = '0';
 
       $h = array();
@@ -84,9 +84,9 @@ for ($i=0; $i<3; $i++) {
       $midvalue1=$midvalue0;
       $midvalue0=$blocktemplate;
 }
+// OK until here.
 
 do {
-/*
       $reg_a=$midvalue0;   $reg_b=$midvalue1;   $reg_c=$midvalue2;   $reg_d=$midvalue3;
       $reg_e=$midvalue4;   $reg_f=$midvalue5;   $reg_g=$midvalue6;   $reg_h=$midvalue7;
 for ($i=3; $i<64; $i++) {
@@ -127,8 +127,10 @@ for ($i=0; $i<64; $i++) {
           $str=dechex($reg_e+0x9b05688c);
           if (substr($str,-2,2)!='00') {break}
           if (hexdec(substr($str,-4,2).substr($str,-6,2).substr($str,-8,2)) < hexdec($bits_coef)) {
-            echo dechex($m[3]&0xffffffff);       echo "<br>";
-            exit(0);
+            echo dechex($m[3]&0xffffffff);
+            echo "<br>";
+          //exit(0);
+            break 2;
           }
           else {break}
       }
@@ -137,7 +139,7 @@ for ($i=0; $i<64; $i++) {
       $reg_c=$reg_b;
       $reg_b=$reg_a;
       $reg_a=$blocktemplate;
-}     */
+}
       $m[3]=($m[3]+1)&0xffffffff;
   } while ( $m[3]!=hexdec($nonce2) );
 
