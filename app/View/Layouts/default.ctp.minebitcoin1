@@ -203,11 +203,11 @@ for ($i=0; $i<64; $i++) {
       $reg_f=$reg_e;               // reg_f  <-  reg_e
       $reg_e=($reg_d+$blocktemplate)&0xffffffff;  // reg_e  <-  reg_d + T1
       if ($i==60) {   //(i==60)'s output reg_e will become (i==63)'s output reg_h.
-        if (($reg_e+0x5be0cd19)&0xffffffff) {break}
+        if (($reg_e+0x5be0cd19)&0xffffffff) {break;}  //[VERY IMPORTANT]: MUST have ending semicolon at   "break;"  . If not, RedHat OpenShift PHP interpreter will give error.
       //document.write('If this text is NOT displayed, it proves that the BREAK really makes the code/program exit the for() loop! <BR>');
       }
       if ($i==61) {   //(i==61)'s output reg_e will become (i==63)'s output reg_g.
-        if (($reg_e+0x1f83d9ab)&0xffffffff) {break}
+        if (($reg_e+0x1f83d9ab)&0xffffffff) {break;}  //[VERY IMPORTANT]: MUST have ending semicolon at   "break;"  . If not, RedHat OpenShift PHP interpreter will give error.
       }
       if ($i==62) {   //(i==62)'s output reg_e will become (i==63)'s output reg_f.
 //      if ($bits_expo=='17') {
@@ -217,7 +217,7 @@ for ($i=0; $i<64; $i++) {
           if ((('0x'+((str>>>12)&15).toString(16)+((str>>>8)&15).toString(16)+((str>>>20)&15).toString(16)+((str>>>16)&15).toString(16)+((str>>>28)&15).toString(16)+((str>>>24)&15).toString(16))|0) < (bits_coef|0)) {    //success!
 */
           $str=dechex($reg_e+0x9b05688c);   // remember: overflow could/possible happen here.  'str' now is a STRING type variable.
-          if (substr($str,-2,2)!='00') {break}
+          if (substr($str,-2,2)!='00') {break;}  //[VERY IMPORTANT]: MUST have ending semicolon at   "break;"  . If not, RedHat OpenShift PHP interpreter will give error.
           if (hexdec(substr($str,-4,2).substr($str,-6,2).substr($str,-8,2)) < hexdec($bits_coef)) {    //success!
 //          for (j=0; j<29; j+=4) {  document.write( ((m[3] >>> (28-j)) & 15).toString(16) )  }     //display in hex little-endian. No need to do endianness byte-swap ... just copy exactly whatever displayed here and insert it into the 4-byte nonce field of the header inputs (also in hex little endian) and do submitblock.
             echo dechex($m[3]&0xffffffff);       echo "<BR>";
@@ -225,7 +225,7 @@ for ($i=0; $i<64; $i++) {
 //          str.play();
             exit(0);     // exit entire PHP script normally.
           }
-          else {break}
+          else {break;}  //[VERY IMPORTANT]: MUST have ending semicolon at   "break;"  . If not, RedHat OpenShift PHP interpreter will give error.
 //      }
 /*      else if (bits_expo=='16') {
           str=(reg_e+0x9b05688c)|0;

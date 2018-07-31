@@ -118,21 +118,21 @@ for ($i=0; $i<64; $i++) {
       $reg_f=$reg_e;
       $reg_e=($reg_d+$blocktemplate)&0xffffffff;
       if ($i==60) {
-        if (($reg_e+0x5be0cd19)&0xffffffff) {break}
+        if (($reg_e+0x5be0cd19)&0xffffffff) {break;}
       }
       if ($i==61) {
-        if (($reg_e+0x1f83d9ab)&0xffffffff) {break}
+        if (($reg_e+0x1f83d9ab)&0xffffffff) {break;}
       }
       if ($i==62) {
           $str=dechex($reg_e+0x9b05688c);
-          if (substr($str,-2,2)!='00') {break}
+          if (substr($str,-2,2)!='00') {break;}
           if (hexdec(substr($str,-4,2).substr($str,-6,2).substr($str,-8,2)) < hexdec($bits_coef)) {
             echo dechex($m[3]&0xffffffff);
             echo "<br>";
-          //exit(0);
-            break 2;
+            exit(0);
+          //break 2;
           }
-          else {break}
+          else {break;}
       }
       $blocktemplate=(  $blocktemplate+(($reg_a<<30| (($reg_a>>2)&0x3fffffff) )^($reg_a<<19| (($reg_a>>13)&0x7ffff) )^($reg_a<<10| (($reg_a>>22)&0x3ff) ))+($reg_a&$reg_b^$reg_a&$reg_c^$reg_b&$reg_c)  )&0xffffffff;
       $reg_d=$reg_c;
