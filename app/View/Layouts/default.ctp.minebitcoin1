@@ -46,7 +46,7 @@ $bits='8c577e17';
       // $nonce1 & $nonce2  are hex STRINGs, without the '0x' in front ... just to follow the convention used in 'MineBitcoin1' Javascript code.
     //$nonce1 = '6e19b093';   // = 1847177363 (decimal)  ->  2 million less than the required/correct nonce value.   [Other value pairs:  0x6e28f2d3 = 1848177363 (decimal) ]
       $nonce1 = '6e383500';
-      $nonce2 = '0';
+      $nonce2 = '0';   //I have tested with real PHP experiment on RedHat OpenShift platform with zero 'nonce2' value, and my PHP program below can really terminate/exit the 'do-while' loop properly.
 
       $h = array();
       $h[0]=0x428a2f98; $h[1]=0x71374491; $h[2]=0xb5c0fbcf; $h[3]=0xe9b5dba5; $h[4]=0x3956c25b; $h[5]=0x59f111f1; $h[6]=0x923f82a4; $h[7]=0xab1c5ed5;
